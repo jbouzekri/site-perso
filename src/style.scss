@@ -1,0 +1,221 @@
+@import "~bootstrap/dist/css/bootstrap";
+
+hr {
+    clear: both;
+    margin: 30px 0;
+}
+
+.centered {
+    text-align: center;
+}
+
+.navbar-fixed-top {
+    position: fixed;
+}
+
+.content {
+    margin-top: 60px;
+}
+
+.block-text {
+    margin-top: 30px;
+}
+
+.main-title {
+    margin-bottom: 30px;
+}
+
+.links ul li {
+    margin-top: 30px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+[class^="site-icon-"], [class*=" site-icon-"] {
+    background-position: 0;
+    width: 48px;
+    height: 48px;
+    vertical-align:middle;
+    display: inline-block;
+}
+
+.site-icon-mail {
+    background-image: url("img/email.png");
+}
+
+.site-icon-cv {
+    background-image: url("img/cv.png");
+}
+
+.site-icon-github {
+    background-image: url("img/github.png");
+}
+
+.site-icon-google {
+    background-image: url("img/google.png");
+}
+
+.date {
+    font-style: italic;
+}
+
+.exp-title {
+    margin-bottom: 55px;
+}
+
+.block-exp .logo {
+    width: 135px;
+}
+
+.block-exp .info {
+    margin-left: 145px;
+}
+
+.block-exp h2 {
+    font-size: 22.5px;
+}
+
+.work-item {
+    text-align: center;
+    margin-bottom: 15px;
+    height: 164px;
+    line-height: 164px;
+    position: relative;
+}
+
+.work-item img {
+    vertical-align: middle;
+}
+
+.back-button {
+    float: right;
+    margin-top: 15px;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+    .work-item {
+        width: 20%;
+    }
+
+    #work-detail .detail {
+        margin-left: 30%;
+    }
+}
+
+/* Large desktop */
+@media (min-width: 980px) and (max-width: 1199px) {
+    .work-item {
+        width: 25%;
+    }
+
+    #work-detail .detail {
+        margin-left: 38%;
+    }
+}
+
+@media (min-width: 768px) {
+    .site-nav {
+        position:relative;
+    }
+
+    .work-detail-logo {
+        float: left;
+        width: 35%;
+        max-width: 260px;
+    }
+
+    .wide-input {
+        width: 80%;
+    }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+    .links ul li {
+        margin: 30px 10px 0 10px;
+    }
+
+    .work-item {
+        width: 33%;
+    }
+
+    #work-detail .detail {
+        margin-left: 40%;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-custom-collapse {
+        height: 0px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .navbar-fixed-top {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .myface img {
+        max-width: 170px;
+    }
+
+    .block-exp h2, .block-exp p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .block-exp h2 {
+        font-size: 23px;
+    }
+
+    .links ul li {
+        margin: 30px 10px 0 10px;
+    }
+
+    .work-item {
+        width: 33%;
+    }
+
+    .work-detail-logo {
+        margin: 0px auto 25px;
+        width: 80%;
+        max-width: 260px;
+    }
+
+    .back-button {
+        margin-top: 0px;
+    }
+
+    .form-contact {
+        margin-top: 30px;
+    }
+
+    .wide-input {
+        width: 85%;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 579px) {
+    .work-item {
+        width: 50%;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    .block-exp h2 {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .wide-input {
+        width: 95%;
+    }
+
+    input[type=text] {
+        width: 95%;
+    }
+}

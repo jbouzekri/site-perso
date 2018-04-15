@@ -1,0 +1,38 @@
+{
+  "name": "site-perso",
+  "version": "1.0.0",
+  "description": "My personal website with my CV",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/webpack --config webpack.config.js",
+    "start": "./node_modules/.bin/webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbouzekri/site-perso.git"
+  },
+  "author": "Jonathan Bouzekri",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/jbouzekri/site-perso/issues"
+  },
+  "homepage": "https://github.com/jbouzekri/site-perso#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.8.3",
+    "sass-loader": "^7.0.1",
+    "static-site-generator-webpack-plugin": "^3.4.1",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.3"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.0"
+  }
+}
