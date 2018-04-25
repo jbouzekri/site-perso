@@ -2,7 +2,9 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+const targetLanguage = process.env.TARGET_LANG || 'fr';
+const env = process.env.NODE_ENV || 'dev';
 
 module.exports = {
     entry: {
@@ -39,9 +41,7 @@ module.exports = {
                             loader: "nunjucks-html-loader",
                             options: {
                                 searchPaths: [path.resolve(__dirname, 'src')],
-                                context: {
-                                    username: 'titi'
-                                }
+                                context: require(path.resolve(__dirname, `lang/${targetLanguage}.json`))
                             }
                         },
                     ]
@@ -49,14 +49,13 @@ module.exports = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin(['dist']),
         new ExtractTextPlugin('style.css'),
         new HtmlWebpackPlugin({
-            filename: 'index.html',
+            filename: `${targetLanguage}/index.html`,
             template: './src/index.html',
         }),
         new HtmlWebpackPlugin({
-            filename: 'cv.html',
+            filename: `${targetLanguage}/cv.html`,
             template: './src/cv.html',
         })
     ],
