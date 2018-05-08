@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const targetLanguage = process.env.TARGET_LANG || 'fr';
-const env = process.env.NODE_ENV || 'dev';
 
 module.exports = {
     entry: {
@@ -34,7 +33,7 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                exclude: /partials/,
+                exclude: /templates/,
                 use: [
                         { loader: 'html-loader' },
                         {

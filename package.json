@@ -6,9 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:dev": "npm run clean && npm run build:dev:fr && npm run build:dev:en",
-    "clean": "node -e 'require(\"rimraf\")(require(\"path\").resolve(__dirname, \"dist\"), ()=>{})'",
     "build:dev:fr": "TARGET_LANG=fr ./node_modules/.bin/webpack --config webpack.config.js",
     "build:dev:en": "TARGET_LANG=en ./node_modules/.bin/webpack --config webpack.config.js",
+    "build:prod": "npm run clean && npm run build:prod:fr && npm run build:prod:en",
+    "build:prod:fr": "NODE_ENV=prod TARGET_LANG=fr ./node_modules/.bin/webpack -p --config webpack.config.js",
+    "build:prod:en": "NODE_ENV=prod TARGET_LANG=en ./node_modules/.bin/webpack -p --config webpack.config.js",
+    "clean": "node -e 'require(\"rimraf\")(require(\"path\").resolve(__dirname, \"dist\"), ()=>{})'",
     "start": "./node_modules/.bin/webpack-dev-server"
   },
   "repository": {

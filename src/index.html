@@ -1,19 +1,40 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <title>Jonathan Bouzekri | Responsable de pôle PHP Symfony</title>
-    <meta name="description" content="Site personnel de Jonathan Bouzekri. Vous y découvrirez la profession de Jonathan Bouzekri, ses compétences, son cv, ...">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="HH0GYzmiVXW67F5MjuBrs8ruQUTm6bXRY0PdZEdbGM0" />
-    <meta charset='utf-8'>
-    <meta name="author" content="Jonathan BOUZEKRI">
+{% extends "templates/layout.html" %}
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+{% block title %}Jonathan Bouzekri | Responsable de pôle PHP Symfony{% endblock %}
+{% block description %}Site personnel de Jonathan Bouzekri. Vous y découvrirez la profession de Jonathan Bouzekri, ses compétences, son cv, ...{% endblock %}
 
-    <!-- Bootstrap core CSS -->
-    <link href="/css/styles.min.css" rel="stylesheet">
-</head>
-<body>
-{% include "./partials/partial.html" %}
-</body>
-</html>
+{% block content %}
+<div class="row" itemscope itemtype="http://data-vocabulary.org/Person">
+    <div class="col-lg-2">
+        <a href="/{{ language }}/" itemprop="url"></a><img class="img-responsive img-rounded thumbnail center-block" src="img/jobou.jpg" itemprop="photo"><!-- take out img-rounded if you don't want the rounded corners on the image -->
+    </div>
+    <div class="col-lg-10">
+        <h1><span itemprop="name">Jonathan Bouzekri</span> <small itemprop="title">Directeur technique</small></h1>
+        <p>Diplomé de l'école supérieure d'électicité <a href="http://www.supelec.fr">Supélec</a> (Promo 2008) et passionné par les nouvelles technologies,
+            je vis et travaille en <span itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address"><span itemprop="region">Ile de France</span></span>
+            en la qualité de directeur technique pour la société <a href="http://www.weenect.com"><span itemprop="affiliation">Weenect</span></a>,
+            leader français des solutions GPS pour la famille.</p>
+        <a class="btn btn-primary btn-lg" href="#my-cv">Mon CV</a>
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-lg-4">
+        <h2>Expertise</h2>
+        <p><strong>Expert PHP</strong>, j'utilise principalement le framework <strong>Symfony2</strong> sur lequel je suis certifié. J'ai également des connaissances sur d'autres frameworks
+            comme <strong>Silex</strong>. Certifié <strong>eZ Publish 5</strong>, j'utilise également ce <strong>CMS</strong> depuis plusieurs années. J'ai des connaissances en
+            <strong>Python</strong>, <strong>Javascript</strong> et <strong>Java</strong>. Suivant le contexte, j'utilise aussi bien des bases de données relationnelles comme <strong>MySQL</strong> que des modèles NoSQL
+            tels que <strong>MongoDB</strong>.</p>
+    </div>
+    <div class="col-lg-4">
+        <h2>Management</h2>
+        <p>Gestion d'équipe (expérience jusqu'à 10 personnes) en tant que responsable hiérarchique, je m'occupe du <strong>planning, du staffing, du plan de charge</strong>. Je supervise les projets et leur production tout en appliquant les bonnes pratiques <strong>Agiles</strong> et <strong>DevOps</strong>. Je suis le produit tout au long de son cycle de vie en gérant les <strong>versions</strong> et la <strong>rétrocompatibilité</strong></p>
+    </div>
+    <div class="col-lg-4">
+        <h2>Communication</h2>
+        <p>Mise en place de <strong>modèles et supports d'avant vente</strong> autour de l'offre Symfony et expertise. Packaging commercial, technique et marketing de cette offre. Nombreuses expériences en <strong>avant vente sur des projets stratégiques</strong>. Gestion des partenaires et <strong>prestataires</strong></p>
+    </div>
+</div>
+{% endblock %}
