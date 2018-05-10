@@ -6,9 +6,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const targetLanguage = process.env.TARGET_LANG || 'fr';
 
 module.exports = {
-    entry: {
-        app: './src/script.js'
-    },
+    entry: './src/script.js',
     module: {
         rules: [
             {
@@ -21,11 +19,12 @@ module.exports = {
                 })
             },
             {
-                test: /\.(png|svg|jpg|gif|ico)$/,
+                test: /\.(png|svg|jpg|gif|ico|woff|woff2|ttf|eot|pdf)$/,
                 use: [
                     {
-                        loader: 'file-loader',
+                        loader: 'url-loader',
                         options: {
+                            limit: 8192,
                             name: '[name].[ext]'
                         }
                     }
@@ -35,7 +34,12 @@ module.exports = {
                 test: /\.html$/,
                 exclude: /templates/,
                 use: [
-                        { loader: 'html-loader' },
+                        {
+                            loader: 'html-loader',
+                            options: {
+                                attrs: ['img:src', 'link:href']
+                            }
+                        },
                         {
                             loader: "nunjucks-html-loader",
                             options: {
@@ -60,7 +64,8 @@ module.exports = {
     ],
     output: {
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist/')
+        path: path.resolve(__dirname, 'dist/'),
+        publicPath: '/'
     },
     devServer: {
         contentBase: path.join(__dirname, "dist"),

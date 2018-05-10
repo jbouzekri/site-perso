@@ -12,7 +12,9 @@
     "build:prod:fr": "NODE_ENV=prod TARGET_LANG=fr ./node_modules/.bin/webpack -p --config webpack.config.js",
     "build:prod:en": "NODE_ENV=prod TARGET_LANG=en ./node_modules/.bin/webpack -p --config webpack.config.js",
     "clean": "node -e 'require(\"rimraf\")(require(\"path\").resolve(__dirname, \"dist\"), ()=>{})'",
-    "start": "./node_modules/.bin/webpack-dev-server"
+    "start": "npm run clean && npm run start:fr",
+    "start:fr": "npm run clean && TARGET_LANG=fr ./node_modules/.bin/webpack-dev-server",
+    "start:en": "npm run clean && TARGET_LANG=en ./node_modules/.bin/webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -25,33 +27,22 @@
   },
   "homepage": "https://github.com/jbouzekri/site-perso#readme",
   "devDependencies": {
-    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
-    "ejs": "^2.5.9",
-    "ejs-compiled-loader": "^1.1.0",
-    "ejs-html-loader": "^3.1.0",
-    "ejs-loader": "^0.3.1",
-    "ejs-render-loader": "^1.0.0",
-    "extract-loader": "^2.0.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
-    "install": "^0.11.0",
     "node-sass": "^4.8.3",
     "npm": "^5.8.0",
     "nunjucks-html-loader": "^1.1.0",
-    "nunjucks-loader": "^3.0.0",
-    "raw-loader": "^0.5.1",
     "rimraf": "^2.6.2",
     "sass-loader": "^7.0.1",
-    "static-site-generator-webpack-plugin": "^3.4.1",
-    "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
     "webpack": "^4.6.0",
     "webpack-cli": "^2.0.14",
     "webpack-dev-server": "^3.1.3"
   },
   "dependencies": {
-    "bootstrap": "^4.1.0"
+    "bootstrap": "^3.3.7"
   }
 }
