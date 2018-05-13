@@ -2,8 +2,10 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const targetLanguage = process.env.TARGET_LANG || 'fr';
+const isProduction = ['prod', 'production'].indexOf(process.env.NODE_ENV) !== -1;
 
 module.exports = {
     entry: './src/script.js',
@@ -37,14 +39,17 @@ module.exports = {
                         {
                             loader: 'html-loader',
                             options: {
-                                attrs: ['img:src', 'link:href']
+                                attrs: ['img:src', 'link:href', 'a:data-href']
                             }
                         },
                         {
                             loader: "nunjucks-html-loader",
                             options: {
                                 searchPaths: [path.resolve(__dirname, 'src')],
-                                context: require(path.resolve(__dirname, `lang/${targetLanguage}.json`))
+                                context: Object.assign(
+                                    require(path.resolve(__dirname, `lang/${targetLanguage}.json`)),
+                                    {"production": isProduction}
+                                )
                             }
                         },
                     ]
@@ -52,6 +57,11 @@ module.exports = {
         ]
     },
     plugins: [
+        new CopyWebpackPlugin([
+            'src/cv_Jonathan_BOUZEKRI.pdf',
+            'src/sitemap.xml',
+            'src/robots.txt'
+        ]),
         new ExtractTextPlugin('style.css'),
         new HtmlWebpackPlugin({
             filename: `${targetLanguage}/index.html`,

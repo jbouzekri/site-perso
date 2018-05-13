@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://jonathan.bouzekri.net/</loc>
-    <changefreq>yearly</changefreq>
+    <loc>https://jonathan.bouzekri.net/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jonathan.bouzekri.net/en/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jonathan.bouzekri.net/fr/" />
   </url>
   <url>
-    <loc>http://jonathan.bouzekri.net/cv</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://jonathan.bouzekri.net/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jonathan.bouzekri.net/en/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jonathan.bouzekri.net/fr/" />
   </url>
   <url>
-    <loc>http://jonathan.bouzekri.net/contact</loc>
-    <changefreq>yearly</changefreq>
+    <loc>https://jonathan.bouzekri.net/fr/cv.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jonathan.bouzekri.net/en/cv.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jonathan.bouzekri.net/fr/cv.html" />
+  </url>
+  <url>
+    <loc>https://jonathan.bouzekri.net/en/cv.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jonathan.bouzekri.net/en/cv.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jonathan.bouzekri.net/fr/cv.html" />
+  </url>
+  <url>
+    <loc>https://jonathan.bouzekri.net/fr/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jonathan.bouzekri.net/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jonathan.bouzekri.net/fr/contact.html" />
+  </url>
+  <url>
+    <loc>https://jonathan.bouzekri.net/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jonathan.bouzekri.net/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jonathan.bouzekri.net/fr/contact.html" />
   </url>
 </urlset>

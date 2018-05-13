@@ -1,4 +1,29 @@
 {
   "language": "fr",
+  "menu": {
+    "home": "Accueil",
+    "cv": "CV",
+    "contact": "Contact",
+    "blog": "Blog"
+  },
+  "general": {
+    "job_title": "Directeur technique",
+    "meta_description": "Site personnel de Jonathan Bouzekri. Vous y découvrirez la profession de Jonathan Bouzekri, ses compétences, son cv, ...",
+    "short_description": "Diplomé de l'école supérieure d'électicité <a href=\"http://www.supelec.fr\">Supélec</a> (Promo 2008) et passionné par les nouvelles technologies, je vis et travaille en <span itemprop=\"address\" itemscope itemtype=\"http://data-vocabulary.org/Address\"><span itemprop=\"region\">Ile de France</span></span> en la qualité de directeur technique pour la société <a href=\"http://www.weenect.com\"><span itemprop=\"affiliation\">Weenect</span></a>, leader français des solutions GPS pour la famille.",
+    "my_cv": "Mon CV",
+    "cv_file": "cv_Jonathan_BOUZEKRI.pdf",
+    "expertise_block": {
+      "title": "Expertise",
+      "description": "<strong>Expert PHP</strong>, j'utilise principalement le framework <strong>Symfony2</strong> sur lequel je suis certifié. J'ai également des connaissances sur d'autres frameworks comme <strong>Silex</strong>. Certifié <strong>eZ Publish 5</strong>, j'utilise également ce <strong>CMS</strong> depuis plusieurs années. J'ai des connaissances en <strong>Python</strong>, <strong>Javascript</strong> et <strong>Java</strong>. Suivant le contexte, j'utilise aussi bien des bases de données relationnelles comme <strong>MySQL</strong> que des modèles NoSQL tels que <strong>MongoDB</strong>."
+    },
+    "management_block": {
+      "title": "Management",
+      "description": "Gestion d'équipe (expérience jusqu'à 10 personnes) en tant que responsable hiérarchique, je m'occupe du <strong>planning, du staffing, du plan de charge</strong>. Je supervise les projets et leur production tout en appliquant les bonnes pratiques <strong>Agiles</strong> et <strong>DevOps</strong>. Je suis le produit tout au long de son cycle de vie en gérant les <strong>versions</strong> et la <strong>rétrocompatibilité</strong>"
+    },
+    "communication_block": {
+      "title": "Communication",
+      "description": "Mise en place de <strong>modèles et supports d'avant vente</strong> autour de l'offre Symfony et expertise. Packaging commercial, technique et marketing de cette offre. Nombreuses expériences en <strong>avant vente sur des projets stratégiques</strong>. Gestion des partenaires et <strong>prestataires</strong>"
+    }
+  },
   "username": "titi fr"
 }

@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="{{ language }}">
 <head>
-    <title>{% block title %}Site personnel{% endblock %}</title>
-    <meta name="description" content="{% block description %}{% endblock %}">
+    <title>{{ page_title }}</title>
+    <meta name="description" content="{{ page_description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="HH0GYzmiVXW67F5MjuBrs8ruQUTm6bXRY0PdZEdbGM0" />
     <meta charset="utf-8">
     <meta name="author" content="Jonathan BOUZEKRI">
+
+    <meta property="og:locale" content="{{ language }}">
+    <meta property="og:locale:alternate" content="{{ language }}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://jonathan.bouzekri.net/{{ language }}/{{ page_url_path }}">
+    <meta property="og:title" content="{{ page_title }}">
+    <meta property="og:description" content="{{ page_description }}">
+    <meta property="og:image" content="https://jonathan.bouzekri.net/jobou.jpg">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@jobou78">
+    <meta name="twitter:title" content="{{ page_title }}">
+    <meta name="twitter:description" content="{{ page_description }}">
+    <meta name="twitter:image" content="https://jonathan.bouzekri.net/jobou.jpg">
+    <meta name="twitter:url" content="https://jonathan.bouzekri.net/{{ language }}/{{ page_url_path }}">
+
+    <link rel="canonical" href="https://jonathan.bouzekri.net/{{ language }}/{{ page_url_path }}" />
+    <link rel="alternate" href="https://jonathan.bouzekri.net/fr/{{ page_url_path }}" hreflang="fr" />
+    <link rel="alternate" href="https://jonathan.bouzekri.net/en/{{ page_url_path }}" hreflang="en" />
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -25,10 +44,10 @@
 
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/{{ language }}/">Accueil</a></li>
-                <li><a href="/{{ language }}/cv.html">CV</a></li>
-                <li><a href="/{{ language }}/contact.html">Contact</a></li>
-                <li><a href="https://blog.bouzekri.net">Blog</a></li>
+                <li{% if page_url_path == "" %} class="active"{% endif %}><a href="/{{ language }}/">{{ menu.home }}</a></li>
+                <li{% if page_url_path == "cv.html" %} class="active"{% endif %}><a href="/{{ language }}/cv.html">{{ menu.cv }}</a></li>
+                <li{% if page_url_path == "contact.html" %} class="active"{% endif %}><a href="/{{ language }}/contact.html">{{ menu.contact }}</a></li>
+                <li><a href="https://blog.bouzekri.net">{{ menu.blog }}</a></li>
             </ul>
 
             <ul class="nav navbar-nav pull-right">
@@ -54,7 +73,7 @@
         </div>
     </footer>
 </div>
-
+{% if production %}
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -64,5 +83,6 @@
     ga('create', 'UA-42442150-1', 'bouzekri.net');
     ga('send', 'pageview');
 </script>
+{% endif %}
 </body>
 </html>
