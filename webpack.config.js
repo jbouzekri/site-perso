@@ -70,6 +70,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: `${targetLanguage}/cv.html`,
             template: './src/cv.html',
+        }),
+        new HtmlWebpackPlugin({
+            filename: `${targetLanguage}/contact.html`,
+            template: './src/contact.html',
         })
     ],
     output: {

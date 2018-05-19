@@ -1,4 +1,8 @@
 {
   "language": "en",
-  "username": "titi en"
+  "username": "titi en",
+  "contact": {
+    "wufoo_label": "Fill out my <a href=\"https://jobou.wufoo.com/forms/m1cpedvg0ybcz4l\">online form</a>.",
+    "wufoo_key": "m1cpedvg0ybcz4l"
+  },
 }

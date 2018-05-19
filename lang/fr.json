@@ -25,5 +25,11 @@
       "description": "Mise en place de <strong>modèles et supports d'avant vente</strong> autour de l'offre Symfony et expertise. Packaging commercial, technique et marketing de cette offre. Nombreuses expériences en <strong>avant vente sur des projets stratégiques</strong>. Gestion des partenaires et <strong>prestataires</strong>"
     }
   },
+  "contact": {
+    "title": "Me contacter",
+    "meta_description": "Contacter Jonathan Bouzekri, Expert PHP et chef de projet technique chez Smile, intégrateur de solution open source",
+    "wufoo_label": "Contactez moi à l'aide de ce <a href=\"https://jobou.wufoo.com/forms/zlu4i630r0fcpk\">formulaire en ligne</a>.",
+    "wufoo_key": "zlu4i630r0fcpk"
+  },
   "username": "titi fr"
 }

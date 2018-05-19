@@ -1,0 +1,52 @@
+{% set page_url_path = "contact.html" %}
+{% set page_title = contact.title ~ " | Jonathan Bouzekri, " ~ general.job_title %}
+{% set page_description = contact.meta_description %}
+
+{% extends "templates/layout.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-9">
+        <h1>{{ contact.title }}</h1>
+        <hr>
+
+        <div id="wufoo-zlu4i630r0fcpk">
+            {{ contact.wufoo_label|safe }}
+        </div>
+        <div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;">
+        </div>
+        <script type="text/javascript">var {{ contact.wufoo_key }};(function(d, t) {
+            var s = d.createElement(t), options = {
+                'userName':'jobou',
+                'formHash':'{{ contact.wufoo_key }}',
+                'autoResize':true,
+                'height':'495',
+                'async':true,
+                'host':'wufoo.com',
+                'header':'hide',
+                'ssl':true};
+            s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+            s.onload = s.onreadystatechange = function() {
+                var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+                try { {{ contact.wufoo_key }} = new WufooForm();{{ contact.wufoo_key }}.initialize(options);{{ contact.wufoo_key }}.display(); } catch (e) {}};
+            var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+        })(document, 'script');</script>
+
+    </div>
+    <div class="col-lg-3">
+        <div id="personnal-info" itemscope="" itemtype="http://data-vocabulary.org/Person">
+            <strong><span itemprop="name">Jonathan Bouzekri</span></strong>
+            <div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+                <span itemprop="postalCode">78540</span> <span itemprop="addressLocality">Vernouillet</span>
+            </div>
+            <p>
+                <span itemprop="email">jonathan.bouzekri@gmail.com</span><br>
+                <span itemprop="telephone">0644263031</span>
+            </p>
+            <p>
+                <img class="img-responsive img-rounded thumbnail center-block" src="https://maps.googleapis.com/maps/api/staticmap?center=Vernouillet+rance&zoom=15&size=300x150&sensor=false&markers=color%3Ared%7CVernouillet+rance&key=AIzaSyAjZsdqxW3e3g682QZ6KaWOZAvKrPoxt9M&signature=kHeZBUzs4VxZht7jimm_Fx0WeqU=" alt="Vernouillet">
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
