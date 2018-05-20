@@ -1,0 +1,108 @@
+<div class="experience">
+    <div class="row">
+        <div class="col-lg-2">
+            <a href="http://www.smile.fr" title="Smile"><img class="img-responsive img-rounded center-block logo" alt="Smile" src="img/smile.png" /></a>
+        </div>
+        <div class="col-lg-10">
+            <h3>Smile <small>{{ cv.exp_smile_cp.title }}</small></h3>
+            <p class="text-muted"><em>{{ cv.exp_smile_cp.date_place }}</em></p>
+        </div>
+    </div>
+    <div class="row content">
+        <div class="col-lg-12">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#smile-cp-resume" data-toggle="tab">{{ cv.summary }}</a></li>
+                <li><a href="#smile-cp-env" data-toggle="tab">{{ cv.dev_environment }}</a></li>
+                <li><a href="#smile-cp-customer" data-toggle="tab">{{ cv.customers }}</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="smile-cp-resume">
+                    <ul>
+                        <li>
+                            <strong>{{ cv.exp_smile_cp.shop_title }}</strong>
+                            <ul>
+                                <li>{{ cv.exp_smile_cp.shop_task_1 }}</li>
+                                <li>{{ cv.exp_smile_cp.shop_task_2 }}</li>
+                                <li>{{ cv.exp_smile_cp.shop_task_3 }}</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>{{ cv.exp_smile_cp.project_title }}</strong>
+                            <ul>
+                                <li>{{ cv.exp_smile_cp.project_task_1 }}</li>
+                                <li>{{ cv.exp_smile_cp.project_task_2 }}</li>
+                                <li>{{ cv.exp_smile_cp.project_task_3 }}</li>
+                                <li>{{ cv.exp_smile_cp.project_task_4 }}</li>
+                                <li>{{ cv.exp_smile_cp.project_task_5 }}</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>{{ cv.exp_smile_cp.training_title }}</strong>
+                            <ul>
+                                <li>{{ cv.exp_smile_cp.training_task_1 }}</li>
+                                <li>{{ cv.exp_smile_cp.training_task_2 }}</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>{{ cv.exp_smile_cp.tech_title }}</strong>
+                            <ul>
+                                <li>{{ cv.exp_smile_cp.tech_task_1 }}</li>
+                                <li>{{ cv.exp_smile_cp.tech_task_2 }}</li>
+                                <li>{{ cv.exp_smile_cp.tech_task_3 }}</li>
+                                <li>{{ cv.exp_smile_cp.tech_task_4 }}</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="smile-cp-env">
+                    <p>
+                        <strong>{{ cv.tech_environments }}</strong>
+                    </p>
+                    <ul>
+                        <li>Debian, Redhat, CentOS</li>
+                        <li>Apache 2, Tomcat 7</li>
+                        <li>MySQL 5, PostgreSQL 9</li>
+                        <li>Apache Solr 3.8 {{ cv.to }} 4.x</li>
+                        <li>PHP 5</li>
+                        <li>Symfony 1.4 {{ cv.and }} 2.x, Silex</li>
+                        <li>eZ Publish 4.x</li>
+                        <li>AngularJS</li>
+                        <li>{{ cv.exp_smile_cp.directories }} : Active Directory {{ cv.and }} OpenLDAP</li>
+                        <li>{{ cv.exp_smile_cp.mirakl }}</li>
+                        <li>{{ cv.exp_smile_cp.sips }}, Paypal Express Checkout</li>
+                        <li>{{ cv.various }} : Akeneo, Bolt CMS, memcached, varnish, shibboleth, nginx, doctrine, cas, cordova/phonegap</li>
+                    </ul>
+                    <p>
+                        <strong>{{ cv.softwares }}</strong>
+                    </p>
+                    <ul>
+                        <li>Jenkins</li>
+                        <li>Netbeans</li>
+                        <li>Subversion, Git</li>
+                        <li>Redmine, Gedi</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="smile-cp-customer">
+                    <ul>
+                        <li>StoryLab</li>
+                        <li>Perenco</li>
+                        <li>Lagardère Active Digital</li>
+                        <li>SOFCOT</li>
+                        <li>Société Générale</li>
+                        <li>TOTAL Raffinage Marketing</li>
+                        <li>Institut Pasteur</li>
+                        <li>CETIOM</li>
+                        <li>Bureau Veritas</li>
+                        <li>CEA</li>
+                        <li>Commerce BtoC - Blanche Porte</li>
+                        <li>Association Prévention Routière</li>
+                        <li>ProwebCE</li>
+                        <li>Opcalia</li>
+                    </ul>
+                </div>
+            </div> <!-- End Tab content -->
+        </div> <!-- End Col -->
+    </div> <!-- End Row -->
+</div> <!-- End Experience -->

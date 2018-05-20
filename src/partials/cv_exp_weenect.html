@@ -1,0 +1,66 @@
+<div class="experience">
+    <div class="row">
+        <div class="col-lg-2">
+            <a href="http://www.weenect.com" title="Weenect"><img class="img-responsive img-rounded center-block logo" alt="Weenect" src="img/weenect.jpg" /></a>
+        </div>
+        <div class="col-lg-10">
+            <h3>Weenect <small>{{ cv.exp_weenect.title }}</small></h3>
+            <p class="text-muted"><em>{{ cv.exp_weenect.date_place }}</em></p>
+        </div>
+    </div>
+    <div class="row content">
+        <div class="col-lg-12">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#weenect-resume" data-toggle="tab">{{ cv.summary }}</a></li>
+                <li><a href="#weenect-env" data-toggle="tab">{{ cv.dev_environment }}</a></li>
+                <li><a href="#weenect-customer" data-toggle="tab">{{ cv.customers }}</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="weenect-resume">
+                    <ul>
+                        <li>{{ cv.exp_weenect.task_1 }}</li>
+                        <li>{{ cv.exp_weenect.task_2 }}</li>
+                        <li>{{ cv.exp_weenect.task_3 }}</li>
+                        <li>{{ cv.exp_weenect.task_4 }}</li>
+                        <li>{{ cv.exp_weenect.task_5 }}</li>
+                        <li>{{ cv.exp_weenect.task_6 }}</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="weenect-env">
+                    <p>
+                        <strong>{{ cv.tech_environments }}</strong>
+                    </p>
+                    <ul>
+                        <li>CentOS</li>
+                        <li>Nginx >=1.6</li>
+                        <li>MongoDB 2.4, MongoDB >=2.6</li>
+                        <li>Python 2.7 {{ cv.and }} 3.4</li>
+                        <li>Angular 1.4 {{ cv.and }} 2.0</li>
+                        <li>{{ cv.various }} : gevent, flask, nagare, OpenStreetMap, sphinx, Ansible, Docker</li>
+                    </ul>
+                    <p>
+                        <strong>{{ cv.softwares }}</strong>
+                    </p>
+                    <ul>
+                        <li>Codeship</li>
+                        <li>PhpStorm, Atom</li>
+                        <li>Git, Github, Bitbucket</li>
+                        <li>Redmine, Trello</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="weenect-customer">
+                    <ul>
+                        <li>British Telecom</li>
+                        <li>Maroc Telecom</li>
+                        <li>NRJ Mobile</li>
+                        <li>Puy du Fou</li>
+                        <li>RUAG</li>
+                        <li>Skiset</li>
+                        <li>Zolux</li>
+                    </ul>
+                </div>
+            </div> <!-- End Tab content -->
+        </div> <!-- End Col -->
+    </div> <!-- End Row -->
+</div> <!-- End Experience -->

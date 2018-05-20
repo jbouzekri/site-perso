@@ -34,7 +34,7 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                exclude: /templates/,
+                exclude: /templates|partials/,
                 use: [
                         {
                             loader: 'html-loader',
@@ -76,6 +76,11 @@ module.exports = {
             template: './src/contact.html',
         })
     ],
+    resolve: {
+        alias: {
+            jquery: "jquery/src/jquery"
+        }
+    },
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist/'),

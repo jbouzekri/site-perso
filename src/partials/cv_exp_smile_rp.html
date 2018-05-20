@@ -1,0 +1,85 @@
+<div class="experience">
+    <div class="row">
+        <div class="col-lg-2">
+            <a href="http://www.smile.fr" title="Smile"><img class="img-responsive img-rounded center-block logo" alt="Smile" src="img/smile.png" /></a>
+        </div>
+        <div class="col-lg-10">
+            <h3>Smile <small>{{ cv.exp_smile_rp.title }}</small></h3>
+            <p class="text-muted"><em>{{ cv.exp_smile_rp.date_place }}</em></p>
+        </div>
+    </div>
+    <div class="row content">
+        <div class="col-lg-12">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#smile-rp-resume" data-toggle="tab">{{ cv.summary }}</a></li>
+                <li><a href="#smile-rp-env" data-toggle="tab">{{ cv.dev_environment }}</a></li>
+                <li><a href="#smile-rp-customer" data-toggle="tab">{{ cv.customers }}</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="smile-rp-resume">
+                    <ul>
+                        <li>
+                            <strong>{{ cv.exp_smile_rp.manager_title }}</strong>
+                            <ul>
+                                <li>{{ cv.exp_smile_rp.manager_task_1 }}</li>
+                                <li>{{ cv.exp_smile_rp.manager_task_2 }}</li>
+                                <li>{{ cv.exp_smile_rp.manager_task_3 }}</li>
+                                <li>{{ cv.exp_smile_rp.manager_task_4 }}</li>
+                                <li>{{ cv.exp_smile_rp.manager_task_5 }}</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>{{ cv.exp_smile_rp.shop_title }}</strong>
+                            <ul>
+                                <li>{{ cv.exp_smile_rp.shop_task_1 }}</li>
+                                <li>{{ cv.exp_smile_rp.shop_task_2 }}</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>{{ cv.exp_smile_rp.tech_title }}</strong>
+                            <ul>
+                                <li>{{ cv.exp_smile_rp.tech_task_1 }}</li>
+                                <li>{{ cv.exp_smile_rp.tech_task_2 }}</li>
+                                <li>{{ cv.exp_smile_rp.tech_task_3 }}</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="smile-rp-env">
+                    <p>
+                        <strong>{{ cv.tech_environments }}</strong>
+                    </p>
+                    <ul>
+                        <li>Debian, Redhat, CentOS</li>
+                        <li>Apache 2, Nginx >=1.6</li>
+                        <li>MySQL 5.x, MongoDB >=2.6</li>
+                        <li>Apache Solr 4.x</li>
+                        <li>PHP >= 5.3</li>
+                        <li>Symfony >= 2.3</li>
+                        <li>AngularJS 1.x</li>
+                        <li>{{ cv.various }} : Akeneo, API Platform, Mirakl, Amazon S3 - EC2 - Code Deploy - CloudFront, Thumbor</li>
+                    </ul>
+                    <p>
+                        <strong>{{ cv.softwares }}</strong>
+                    </p>
+                    <ul>
+                        <li>Jenkins, Travis, SensioInsight, Blackfire.io</li>
+                        <li>PhpStorm, Atom</li>
+                        <li>Git, Github, Bitbucket</li>
+                        <li>Redmine, Jira, Trello</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="smile-rp-customer">
+                    <ul>
+                        <li>beIN Sports</li>
+                        <li>JC Decaux</li>
+                        <li>Renault</li>
+                        <li>StoryLab</li>
+                    </ul>
+                </div>
+            </div> <!-- End Tab content -->
+        </div> <!-- End Col -->
+    </div> <!-- End Row -->
+</div> <!-- End Experience -->

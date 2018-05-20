@@ -1,1 +1,34 @@
-<p>CV</p>
+{% set page_url_path = "cv.html" %}
+{% set page_title = cv.title ~ " | Jonathan Bouzekri, " ~ general.job_title %}
+{% set page_description = cv.meta_description %}
+
+{% extends "templates/layout.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8">
+        <h2>{{ cv.experience_title }}</h2>
+
+        {% include "partials/cv_exp_weenect.html" %}
+        {% include "partials/cv_exp_smile_rp.html" %}
+        {% include "partials/cv_exp_smile_cp.html" %}
+        {% include "partials/cv_exp_smile_ied.html" %}
+        {% include "partials/cv_exp_smile_its.html" %}
+        {% include "partials/cv_exp_icdc_its.html" %}
+        {% include "partials/cv_exp_sncf_its.html" %}
+
+    </div> <!-- End Col -->
+
+    <div class="col-lg-4">
+        <p style="text-align: right;"><a href="/cv_Jonathan_BOUZEKRI.pdf" target="_blank" class="btn btn-default">{{ cv.download_cv }}<img src="img/pdf.png" width="32" height="32" style="margin-top: -15px; position: absolute;"></a></p>
+
+        {% include "partials/cv_col_skills.html" %}
+        {% include "partials/cv_col_certifs.html" %}
+        {% include "partials/cv_col_degrees.html" %}
+        {% include "partials/cv_col_langs.html" %}
+        {% include "partials/cv_col_moocs.html" %}
+        {% include "partials/cv_col_others.html" %}
+
+    </div>
+</div>
+{% endblock %}
